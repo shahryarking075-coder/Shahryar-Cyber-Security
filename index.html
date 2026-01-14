@@ -54,6 +54,16 @@
 <footer>
 © 2026 Shahryar Ethical Hacking Academy
 </footer>
+  <script>
+window.onload = function () {
+    let msg = new SpeechSynthesisUtterance();
+    msg.text = "Hi Shahryar, welcome to Shahryar Cyber Security Academy";
+    msg.lang = "ur-PK";  
+    msg.rate = 0.95;     
+    msg.pitch = 1.1;    
+    speechSynthesis.speak(msg);
+};
+  </script>
 
 </body>
 </html>
