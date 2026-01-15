@@ -53,45 +53,31 @@
 <!-- Footer -->
 <footer>
 © 2026 Shahryar Ethical Hacking Academy
-</footer>
-  <script>
-window.onload = function () {
-    let msg = new SpeechSynthesisUtterance();
-    msg.text = "Hi Shahryar, welcome to Shahryar Cyber Security Academy";
-    msg.lang = "ur-PK";  
-    msg.rate = 0.95;     
-    msg.pitch = 1.1;    
-    speechSynthesis.speak(msg);
-};
-  </script>
-
 </body>
+  <!-- 🔊 WELCOME VOICE BUTTON -->
+<button id="voiceBtn" style="
+margin:20px;
+padding:14px 22px;
+border-radius:30px;
+background:linear-gradient(45deg,#00ffd5,#00ff88);
+border:none;
+font-size:17px;
+box-shadow:0 0 15px #00ffd5;
+">
+🔊 خوش آمدید سننے کے لیے یہاں ٹچ کریں
+</button>
 
-  <script>
-var pass = "Shahryar";   // 👈 yahan apna password change kar sakte ho
-
-var user = prompt("🔐 Shahryar Cyber Security\n\nEnter Access Password:");
-
-if (user !== pass) {
-  alert("❌ Wrong Password!\nAccess Denied.");
-  window.location = "https://google.com";
-}
-  </script>
-  
-  <button id="voiceBtn" class="btn">🔊 خوش آمدید سننے کے لیے یہاں ٹچ کریں</button>
-  <script>
-document.getElementById("voiceBtn").addEventListener("click", function() {
-
+<script>
+document.getElementById("voiceBtn").addEventListener("click", function(){
   var msg = new SpeechSynthesisUtterance();
   msg.text = "سلام شہریار، خوش آمدید شاہریار سائبر سیکیورٹی لیب میں";
   msg.lang = "ur-PK";
   msg.rate = 0.9;
   msg.pitch = 1.1;
-
   speechSynthesis.speak(msg);
-
-  this.style.display = "none";   // بٹن خود چھپ جائے گا
+  this.style.display="none";
 });
-  </script>
-</html>
+</script>
+  
+  </html>
 <script src="js/script.js"></script>
