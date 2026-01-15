@@ -17,7 +17,7 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-img">
-    <!-- Add your profile picture in /images/shahryar.jpg -->
+    <!-- Add your profile picture in shahryar.jpg -->
     <img src="shahryar.jpg" alt="Shahryar Profile">
   </div>
 
@@ -78,17 +78,20 @@ if (user !== pass) {
 }
   </script>
   
+  <button id="voiceBtn" class="btn">🔊 خوش آمدید سننے کے لیے یہاں ٹچ کریں</button>
   <script>
-window.onload = function() {
+document.getElementById("voiceBtn").addEventListener("click", function() {
 
   var msg = new SpeechSynthesisUtterance();
-  msg.text = "Hi Shahryar, Welcome to Cyber Security Lab";
-  msg.lang = "ur-PK";   // Urdu voice
-  msg.rate = 0.9;      // Smooth speed
-  msg.pitch = 1.1;     // Soft tone
+  msg.text = "سلام شہریار، خوش آمدید شاہریار سائبر سیکیورٹی لیب میں";
+  msg.lang = "ur-PK";
+  msg.rate = 0.9;
+  msg.pitch = 1.1;
 
-  window.speechSynthesis.speak(msg);
-}
+  speechSynthesis.speak(msg);
+
+  this.style.display = "none";   // بٹن خود چھپ جائے گا
+});
   </script>
 </html>
 <script src="js/script.js"></script>
